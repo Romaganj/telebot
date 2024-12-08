@@ -9,12 +9,12 @@ import time
 
 import pytest
 
-import telebot
-from telebot import types
-from telebot.handler_backends import MemoryHandlerBackend, FileHandlerBackend
+import bot
+from bot import types
+from bot.handler_backends import MemoryHandlerBackend, FileHandlerBackend
 
 if REDIS_TESTS:
-    from telebot.handler_backends import RedisHandlerBackend
+    from bot.handler_backends import RedisHandlerBackend
 
 
 @pytest.fixture()

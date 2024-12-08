@@ -8,7 +8,7 @@ import logging
 
 import cherrypy
 
-import telebot
+import bot
 
 API_TOKEN = '<api_token>'
 

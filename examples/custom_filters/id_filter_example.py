@@ -1,5 +1,5 @@
-import telebot
-from telebot import custom_filters
+import bot
+from bot import custom_filters
 
 bot = telebot.TeleBot('token')
 

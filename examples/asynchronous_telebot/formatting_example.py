@@ -1,5 +1,5 @@
-from telebot.async_telebot import AsyncTeleBot
-from telebot import formatting
+from bot.async_telebot import AsyncTeleBot
+from bot import formatting
 
 bot = AsyncTeleBot('token')
 

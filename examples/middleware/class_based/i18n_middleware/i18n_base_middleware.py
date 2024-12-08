@@ -2,7 +2,7 @@ import gettext
 import os
 import threading
 
-from telebot.handler_backends import BaseMiddleware
+from bot.handler_backends import BaseMiddleware
 
 try:
     from babel.support import LazyProxy

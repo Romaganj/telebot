@@ -3,8 +3,8 @@ import logging
 import sys
 import time
 
-import telebot
-from telebot import types
+import bot
+from bot import types
 
 API_TOKEN = '<TOKEN>'
 

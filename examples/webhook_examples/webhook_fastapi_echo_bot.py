@@ -7,7 +7,7 @@
 import logging
 import fastapi
 import uvicorn
-import telebot
+import bot
 
 API_TOKEN = 'TOKEN'
 

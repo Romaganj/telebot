@@ -2,7 +2,7 @@ import calendar
 from datetime import date, timedelta
 
 from filters import calendar_factory, calendar_zoom
-from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
+from bot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 EMTPY_FIELD = '1'
 WEEK_DAYS = [calendar.day_abbr[i] for i in range(7)]

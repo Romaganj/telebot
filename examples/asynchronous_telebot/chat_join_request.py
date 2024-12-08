@@ -1,6 +1,6 @@
-from telebot.async_telebot import AsyncTeleBot
+from bot.async_telebot import AsyncTeleBot
 
-import telebot
+import bot
 bot = AsyncTeleBot('TOKEN')
 
 @bot.chat_join_request_handler()

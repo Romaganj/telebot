@@ -9,7 +9,7 @@ import time
 
 import flask
 
-import telebot
+import bot
 
 API_TOKEN = '<api_token>'
 

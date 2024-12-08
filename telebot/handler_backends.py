@@ -2,7 +2,7 @@ import os
 import pickle
 import threading
 
-from telebot import apihelper
+from bot import apihelper
 try:
     from redis import Redis
     redis_installed = True

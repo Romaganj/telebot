@@ -17,7 +17,7 @@ except ImportError:
 import asyncio
 
 
-from telebot.types import Update
+from bot.types import Update
 
 
 from typing import Optional

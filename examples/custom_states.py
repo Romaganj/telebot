@@ -1,10 +1,10 @@
-import telebot # telebot
+import bot # telebot
 
-from telebot import custom_filters
-from telebot.handler_backends import State, StatesGroup #States
+from bot import custom_filters
+from bot.handler_backends import State, StatesGroup #States
 
 # States storage
-from telebot.storage import StateMemoryStorage
+from bot.storage import StateMemoryStorage
 
 
 # Starting from version 4.4.0+, we support storages.

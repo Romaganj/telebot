@@ -1,4 +1,4 @@
-import telebot
+import bot
 
 TOKEN = 'YOUR BOT TOKEN'
 CHAT_ID = 'YOUR CHAT ID'

@@ -4,7 +4,7 @@
 # It echoes any incoming text messages.
 # Example on built-in function to receive and process webhooks.
 
-from telebot.async_telebot import AsyncTeleBot
+from bot.async_telebot import AsyncTeleBot
 import asyncio
 bot = AsyncTeleBot('TOKEN')
 

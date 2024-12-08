@@ -3,9 +3,9 @@
 This Example will show you how to use CallbackData
 """
 
-from telebot.callback_data import CallbackData, CallbackDataFilter
-from telebot import types, TeleBot
-from telebot.custom_filters import AdvancedCustomFilter
+from bot.callback_data import CallbackData, CallbackDataFilter
+from bot import types, TeleBot
+from bot.custom_filters import AdvancedCustomFilter
 
 API_TOKEN = ''
 PRODUCTS = [

@@ -1,4 +1,4 @@
-from telebot.asyncio_storage.base_storage import StateStorageBase, StateContext
+from bot.asyncio_storage.base_storage import StateStorageBase, StateContext
 import os
 
 import pickle

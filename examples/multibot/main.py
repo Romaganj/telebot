@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import request, abort
-from telebot import TeleBot, types, util
+from bot import TeleBot, types, util
 from handlers import register_handlers
 
 import config

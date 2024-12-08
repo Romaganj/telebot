@@ -1,5 +1,5 @@
-from telebot.async_telebot import AsyncTeleBot
-from telebot import asyncio_filters
+from bot.async_telebot import AsyncTeleBot
+from bot import asyncio_filters
 bot = AsyncTeleBot('TOKEN')
 
 # Handler

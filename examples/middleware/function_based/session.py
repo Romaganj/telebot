@@ -12,8 +12,8 @@
 # message handler functions to be able to use it.
 # The middleware session is explained:
 
-import telebot
-from telebot import apihelper
+import bot
+from bot import apihelper
 
 apihelper.ENABLE_MIDDLEWARE = True
 

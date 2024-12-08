@@ -1,5 +1,5 @@
-from telebot.async_telebot import AsyncTeleBot
-from telebot import types
+from bot.async_telebot import AsyncTeleBot
+from bot import types
 
 
 async def hello_handler(message: types.Message, bot: AsyncTeleBot):

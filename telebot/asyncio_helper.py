@@ -2,7 +2,7 @@ import asyncio # for future uses
 import ssl
 import aiohttp
 import certifi
-from telebot import types
+from bot import types
 
 try:
     import ujson as json
@@ -13,7 +13,7 @@ API_URL = 'https://api.telegram.org/bot{0}/{1}'
 
 from datetime import datetime
 
-from telebot import util
+from bot import util
 import logging
 
 logger = logging.getLogger('TeleBot')

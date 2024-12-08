@@ -1,5 +1,5 @@
-import telebot
-from telebot import types,util
+import bot
+from bot import types,util
 
 bot = telebot.TeleBot("token")
 

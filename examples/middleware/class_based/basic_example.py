@@ -1,5 +1,5 @@
-from telebot import TeleBot
-from telebot.handler_backends import BaseMiddleware
+from bot import TeleBot
+from bot.handler_backends import BaseMiddleware
 
 bot = TeleBot('TOKEN', use_class_middlewares=True) # set use_class_middlewares to True!
 # otherwise, class-based middlewares won't execute.

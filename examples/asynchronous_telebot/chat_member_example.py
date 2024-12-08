@@ -1,5 +1,5 @@
-from telebot import types,util
-from telebot.async_telebot import AsyncTeleBot
+from bot import types,util
+from bot.async_telebot import AsyncTeleBot
 
 bot = AsyncTeleBot('TOKEN')
 

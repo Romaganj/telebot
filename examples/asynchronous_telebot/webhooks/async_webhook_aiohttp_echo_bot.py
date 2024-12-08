@@ -8,8 +8,8 @@ import logging
 import ssl
 import asyncio
 from aiohttp import web
-import telebot
-from telebot.async_telebot import AsyncTeleBot
+import bot
+from bot.async_telebot import AsyncTeleBot
 
 API_TOKEN = '<api_token>'
 WEBHOOK_HOST = '<ip/host where the bot is running>'

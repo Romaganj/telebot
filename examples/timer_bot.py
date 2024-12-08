@@ -4,7 +4,7 @@
 # https://schedule.readthedocs.io
 
 import time, threading, schedule
-from telebot import TeleBot
+from bot import TeleBot
 
 API_TOKEN = '<api_token>'
 bot = TeleBot(API_TOKEN)

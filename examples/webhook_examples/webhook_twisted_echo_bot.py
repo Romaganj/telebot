@@ -8,7 +8,7 @@
 # https://twistedmatrix.com/documents/current/web/howto/using-twistedweb.html
 
 import logging
-import telebot
+import bot
 import json
 from twisted.internet import ssl, reactor
 from twisted.web.resource import Resource, ErrorPage

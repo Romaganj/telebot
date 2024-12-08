@@ -3,8 +3,8 @@
 This Example will show you how to use register_next_step handler.
 """
 
-import telebot
-from telebot import types
+import bot
+from bot import types
 
 API_TOKEN = '<api_token>'
 

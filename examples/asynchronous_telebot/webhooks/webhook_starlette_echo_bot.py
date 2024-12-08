@@ -11,8 +11,8 @@ from starlette.applications import Starlette
 from starlette.requests import Request
 from starlette.responses import PlainTextResponse, Response
 from starlette.routing import Route
-from telebot.async_telebot import AsyncTeleBot
-from telebot.types import Message, Update
+from bot.async_telebot import AsyncTeleBot
+from bot.types import Message, Update
 
 API_TOKEN = "TOKEN"
 

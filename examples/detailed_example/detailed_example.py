@@ -4,8 +4,8 @@ This is a detailed example using almost every command of the API
 
 import time
 
-import telebot
-from telebot import types
+import bot
+from bot import types
 
 TOKEN = '<token_string>'
 

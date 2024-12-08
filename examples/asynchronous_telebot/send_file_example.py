@@ -1,6 +1,6 @@
 
-import telebot
-from telebot.async_telebot import AsyncTeleBot
+import bot
+from bot.async_telebot import AsyncTeleBot
 
 
 

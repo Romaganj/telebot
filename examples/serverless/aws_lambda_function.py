@@ -5,7 +5,7 @@ You have to set your lambda's url as telegram webhook manually https://core.tele
 
 import logging
 
-import telebot
+import bot
 import json
 import os
 

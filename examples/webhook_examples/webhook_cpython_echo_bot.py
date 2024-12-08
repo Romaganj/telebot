@@ -14,7 +14,7 @@ except ImportError:
 import logging
 import ssl
 
-import telebot
+import bot
 
 API_TOKEN = '<api_token>'
 

@@ -12,7 +12,7 @@ import tornado.ioloop
 import tornado.options
 import tornado.web
 
-import telebot
+import bot
 
 API_TOKEN = '<api_token>'
 WEBHOOK_CERT = "./cert.pem"

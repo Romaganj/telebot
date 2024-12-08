@@ -1,4 +1,4 @@
-from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
+from bot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
 def languages_keyboard():

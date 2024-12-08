@@ -1,4 +1,4 @@
-import telebot
+import bot
 
 api_token = 'token'
 

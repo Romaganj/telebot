@@ -5,8 +5,8 @@
 # `/find` - Find a person you can contact
 # `/stop` - Stop active conversation
 
-import telebot
-from telebot import types
+import bot
+from bot import types
 
 # Initialize bot with your token
 bot = telebot.TeleBot('TOKEN')

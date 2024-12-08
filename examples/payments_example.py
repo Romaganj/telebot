@@ -1,5 +1,5 @@
-import telebot
-from telebot.types import LabeledPrice, ShippingOption
+import bot
+from bot.types import LabeledPrice, ShippingOption
 
 token = '1234567890:AAAABBBBCCCCDDDDeeeeFFFFgggGHHHH'
 provider_token = '1234567890:TEST:AAAABBBBCCCCDDDD'  # @BotFather -> Bot Settings -> Payments

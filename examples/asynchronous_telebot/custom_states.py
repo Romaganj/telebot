@@ -1,11 +1,11 @@
-from telebot import asyncio_filters
-from telebot.async_telebot import AsyncTeleBot
+from bot import asyncio_filters
+from bot.async_telebot import AsyncTeleBot
 
 # list of storages, you can use any storage
-from telebot.asyncio_storage import StateMemoryStorage
+from bot.asyncio_storage import StateMemoryStorage
 
 # new feature for states.
-from telebot.asyncio_handler_backends import State, StatesGroup
+from bot.asyncio_handler_backends import State, StatesGroup
 
 # default state storage is statememorystorage
 bot = AsyncTeleBot('TOKEN', state_storage=StateMemoryStorage())

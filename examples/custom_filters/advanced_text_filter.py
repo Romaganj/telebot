@@ -5,8 +5,8 @@ In this example you will see how to use TextFilter
 with (message_handler, callback_query_handler, poll_handler)
 """
 
-from telebot import TeleBot, types
-from telebot.custom_filters import TextFilter, TextMatchFilter, IsReplyFilter
+from bot import TeleBot, types
+from bot.custom_filters import TextFilter, TextMatchFilter, IsReplyFilter
 
 bot = TeleBot("")
 

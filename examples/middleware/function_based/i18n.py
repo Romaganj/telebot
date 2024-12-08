@@ -12,8 +12,8 @@
 # handler functions for not repeatedly activating it.
 # The middleware (i18n and l10n) is explained:
 
-import telebot
-from telebot import apihelper
+import bot
+from bot import apihelper
 
 apihelper.ENABLE_MIDDLEWARE = True
 

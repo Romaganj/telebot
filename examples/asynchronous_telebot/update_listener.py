@@ -1,4 +1,4 @@
-from telebot.async_telebot import AsyncTeleBot
+from bot.async_telebot import AsyncTeleBot
 
 # Update listeners are functions that are called when any update is received.
 

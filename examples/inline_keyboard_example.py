@@ -1,6 +1,6 @@
 # This example show how to use inline keyboards and process button presses
-import telebot
-from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
+import bot
+from bot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 TELEGRAM_TOKEN = '<TOKEN>'
 

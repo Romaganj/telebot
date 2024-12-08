@@ -40,9 +40,9 @@ If you have any exceptions check:
     - you are writing commands from correct path in terminal
 """
 
-from telebot import TeleBot, types, custom_filters
-from telebot import apihelper
-from telebot.storage.memory_storage import StateMemoryStorage
+from bot import TeleBot, types, custom_filters
+from bot import apihelper
+from bot.storage.memory_storage import StateMemoryStorage
 
 import keyboards
 from i18n_class import I18N

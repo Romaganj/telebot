@@ -1,4 +1,4 @@
-from telebot.asyncio_storage.base_storage import StateStorageBase, StateContext
+from bot.asyncio_storage.base_storage import StateStorageBase, StateContext
 
 class StateMemoryStorage(StateStorageBase):
     def __init__(self) -> None:

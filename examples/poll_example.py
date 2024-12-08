@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 # This is an example file to create quiz polls
-import telebot
+import bot
 
 API_TOKEN = "<api_token>"
 

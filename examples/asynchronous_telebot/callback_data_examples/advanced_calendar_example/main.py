@@ -8,8 +8,8 @@ from datetime import date
 
 from filters import calendar_factory, calendar_zoom, bind_filters
 from keyboards import generate_calendar_days, generate_calendar_months, EMTPY_FIELD
-from telebot import types
-from telebot.async_telebot import AsyncTeleBot
+from bot import types
+from bot.async_telebot import AsyncTeleBot
 
 API_TOKEN = ''
 bot = AsyncTeleBot(API_TOKEN)

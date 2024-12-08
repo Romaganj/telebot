@@ -1,6 +1,6 @@
-import telebot
+import bot
 from time import sleep, time
-from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton #Only for creating Inline Buttons, not necessary for creating Invite Links
+from bot.types import InlineKeyboardMarkup, InlineKeyboardButton #Only for creating Inline Buttons, not necessary for creating Invite Links
 
 Token = "api_token" #Your Bot Access Token
 Group_ID = -1234567890 #Group ID for which invite link is to be created

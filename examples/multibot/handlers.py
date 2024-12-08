@@ -1,4 +1,4 @@
-from telebot import types, TeleBot
+from bot import types, TeleBot
 
 
 def hello_handler(message: types.Message, bot: TeleBot):

@@ -1,4 +1,4 @@
-import telebot
+import bot
 
 
 bot = telebot.TeleBot('TOKEN')

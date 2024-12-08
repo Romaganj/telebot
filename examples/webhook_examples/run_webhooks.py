@@ -4,7 +4,7 @@
 # It echoes any incoming text messages.
 # Example on built-in function to receive and process webhooks.
 
-import telebot
+import bot
 
 API_TOKEN = 'TOKEN'
 

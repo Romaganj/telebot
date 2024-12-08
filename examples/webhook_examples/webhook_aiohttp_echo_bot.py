@@ -9,7 +9,7 @@ import ssl
 
 from aiohttp import web
 
-import telebot
+import bot
 
 API_TOKEN = '<api_token>'
 

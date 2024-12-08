@@ -14,7 +14,7 @@ try:
 except ImportError:
     fastapi_installed = False
 
-from telebot.types import Update
+from bot.types import Update
 
 from typing import Optional
 

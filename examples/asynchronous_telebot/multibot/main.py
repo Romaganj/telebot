@@ -1,8 +1,8 @@
 import asyncio
 
 from aiohttp import web
-from telebot import types, util
-from telebot.async_telebot import AsyncTeleBot
+from bot import types, util
+from bot.async_telebot import AsyncTeleBot
 from handlers import register_handlers
 
 import config

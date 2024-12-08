@@ -53,11 +53,11 @@ import asyncio
 from typing import Union
 
 import keyboards
-from telebot import types
-from telebot.async_telebot import AsyncTeleBot
-from telebot.asyncio_filters import TextMatchFilter, TextFilter
+from bot import types
+from bot.async_telebot import AsyncTeleBot
+from bot.asyncio_filters import TextMatchFilter, TextFilter
 from i18n_base_middleware import I18N
-from telebot.asyncio_storage.memory_storage import StateMemoryStorage
+from bot.asyncio_storage.memory_storage import StateMemoryStorage
 
 
 class I18NMiddleware(I18N):

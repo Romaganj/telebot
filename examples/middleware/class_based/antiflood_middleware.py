@@ -1,8 +1,8 @@
 # Just a little example of middleware handlers
 
-from telebot.handler_backends import BaseMiddleware
-from telebot import TeleBot
-from telebot.handler_backends import CancelUpdate
+from bot.handler_backends import BaseMiddleware
+from bot import TeleBot
+from bot.handler_backends import CancelUpdate
 bot = TeleBot('TOKEN',
             use_class_middlewares=True) # if you don't set it to true, middlewares won't work
 

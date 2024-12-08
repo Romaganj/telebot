@@ -1,5 +1,5 @@
-from telebot import TeleBot
-from telebot import formatting
+from bot import TeleBot
+from bot import formatting
 
 bot = TeleBot('TOKEN')
 

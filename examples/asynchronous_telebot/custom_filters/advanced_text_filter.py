@@ -6,9 +6,9 @@ with (message_handler, callback_query_handler, poll_handler)
 """
 import asyncio
 
-from telebot import types
-from telebot.async_telebot import AsyncTeleBot
-from telebot.asyncio_filters import TextMatchFilter, TextFilter, IsReplyFilter
+from bot import types
+from bot.async_telebot import AsyncTeleBot
+from bot.asyncio_filters import TextMatchFilter, TextFilter, IsReplyFilter
 
 bot = AsyncTeleBot("")
 

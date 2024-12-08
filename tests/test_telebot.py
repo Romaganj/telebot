@@ -9,9 +9,9 @@ import pytest
 import os
 from datetime import datetime, timedelta
 
-import telebot
-from telebot import types
-from telebot import util
+import bot
+from bot import types
+from bot import util
 
 should_skip = 'TOKEN' and 'CHAT_ID' not in os.environ
 
@@ -647,7 +647,7 @@ let number = loop {
 
 
     def test_typed_middleware_handler(self):
-        from telebot import apihelper
+        from bot import apihelper
 
         apihelper.ENABLE_MIDDLEWARE = True
 
@@ -668,7 +668,7 @@ let number = loop {
         assert update.message.text == 'got' * 2
 
     def test_default_middleware_handler(self):
-        from telebot import apihelper
+        from bot import apihelper
 
         apihelper.ENABLE_MIDDLEWARE = True
 

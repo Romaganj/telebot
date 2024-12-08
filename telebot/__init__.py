@@ -10,12 +10,12 @@ import traceback
 from typing import Any, Callable, List, Optional, Union
 
 # these imports are used to avoid circular import error
-import telebot.util
-import telebot.types
-import telebot.formatting
+import bot.util
+import bot.types
+import bot.formatting
 
 # storage
-from telebot.storage import StatePickleStorage, StateMemoryStorage, StateStorageBase
+from bot.storage import StatePickleStorage, StateMemoryStorage, StateStorageBase
 
 # random module to generate random string
 import random
@@ -37,12 +37,12 @@ logger.addHandler(console_output_handler)
 
 logger.setLevel(logging.ERROR)
 
-from telebot import apihelper, util, types
-from telebot.handler_backends import (
+from bot import apihelper, util, types
+from bot.handler_backends import (
     HandlerBackend, MemoryHandlerBackend, FileHandlerBackend, BaseMiddleware,
     CancelUpdate, SkipHandler, State, ContinueHandling
 )
-from telebot.custom_filters import SimpleCustomFilter, AdvancedCustomFilter
+from bot.custom_filters import SimpleCustomFilter, AdvancedCustomFilter
 
 
 REPLY_MARKUP_TYPES = Union[
@@ -537,7 +537,7 @@ class TeleBot:
         ssl_context = (certificate, certificate_key) if certificate else (None, None)
         # webhooks module
         try:
-            from telebot.ext.sync import SyncWebhookListener
+            from bot.ext.sync import SyncWebhookListener
         except (NameError, ImportError):
             raise ImportError("Please install uvicorn and fastapi in order to use `run_webhooks` method.")
         self.webhook_listener = SyncWebhookListener(bot=self, secret_token=secret_token, host=listen, port=port, ssl_context=ssl_context, url_path='/'+url_path)
@@ -887,7 +887,7 @@ class TeleBot:
     def _setup_change_detector(self, path_to_watch: str):
         try:
             from watchdog.observers import Observer
-            from telebot.ext.reloader import EventHandler
+            from bot.ext.reloader import EventHandler
         except ImportError:
             raise ImportError(
                 'Please install watchdog and psutil before using restart_on_change option.'

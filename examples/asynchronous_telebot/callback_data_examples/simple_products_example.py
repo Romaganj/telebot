@@ -3,10 +3,10 @@
 This Example will show you how to use CallbackData
 """
 
-from telebot.callback_data import CallbackData, CallbackDataFilter
-from telebot import types
-from telebot.async_telebot import AsyncTeleBot
-from telebot.asyncio_filters import AdvancedCustomFilter
+from bot.callback_data import CallbackData, CallbackDataFilter
+from bot import types
+from bot.async_telebot import AsyncTeleBot
+from bot.asyncio_filters import AdvancedCustomFilter
 
 API_TOKEN = 'TOKEN'
 PRODUCTS = [

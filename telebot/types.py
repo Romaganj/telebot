@@ -13,7 +13,7 @@ try:
 except ImportError:
     import json
 
-from telebot import service_utils
+from bot import service_utils
 
 DISABLE_KEYLEN_ERROR = False
 

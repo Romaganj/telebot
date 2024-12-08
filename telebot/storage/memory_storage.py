@@ -1,4 +1,4 @@
-from telebot.storage.base_storage import StateStorageBase, StateContext
+from bot.storage.base_storage import StateStorageBase, StateContext
 
 
 class StateMemoryStorage(StateStorageBase):

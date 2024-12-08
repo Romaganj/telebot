@@ -5,7 +5,7 @@
 # Important, to update the command menu, be sure to exit the chat with the bot and enter to chat again
 # Important, command for chat_id and for group have a higher priority than for all
 
-import telebot
+import bot
 
 
 API_TOKEN = '<api_token>'

@@ -3,7 +3,7 @@
 # This is a simple echo bot using the decorator mechanism.
 # It echoes any incoming text messages.
 
-from telebot.async_telebot import AsyncTeleBot
+from bot.async_telebot import AsyncTeleBot
 bot = AsyncTeleBot('TOKEN')
 
 

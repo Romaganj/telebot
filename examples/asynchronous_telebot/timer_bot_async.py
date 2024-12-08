@@ -6,7 +6,7 @@
 
 import asyncio
 import aioschedule
-from telebot.async_telebot import AsyncTeleBot
+from bot.async_telebot import AsyncTeleBot
 
 API_TOKEN = '<api_token>'
 bot = AsyncTeleBot(API_TOKEN)

@@ -5,7 +5,7 @@
 
 import os
 
-import telebot
+import bot
 
 text_messages = {
     'welcome':

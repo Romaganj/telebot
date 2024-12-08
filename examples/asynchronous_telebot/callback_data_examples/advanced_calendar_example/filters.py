@@ -1,7 +1,7 @@
-from telebot import types
-from telebot.async_telebot import AsyncTeleBot
-from telebot.asyncio_filters import AdvancedCustomFilter
-from telebot.callback_data import CallbackData, CallbackDataFilter
+from bot import types
+from bot.async_telebot import AsyncTeleBot
+from bot.asyncio_filters import AdvancedCustomFilter
+from bot.callback_data import CallbackData, CallbackDataFilter
 
 calendar_factory = CallbackData("year", "month", prefix="calendar")
 calendar_zoom = CallbackData("year", prefix="calendar_zoom")

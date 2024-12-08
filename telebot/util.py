@@ -11,8 +11,8 @@ from urllib.parse import parse_qsl
 import queue as Queue
 import logging
 
-from telebot import types
-from telebot.service_utils import is_pil_image, is_dict, is_string, is_bytes, chunks, generate_random_token, pil_image_to_file
+from bot import types
+from bot.service_utils import is_pil_image, is_dict, is_string, is_bytes, chunks, generate_random_token, pil_image_to_file
 
 try:
     import ujson as json
@@ -612,7 +612,7 @@ def antiflood(function: Callable, *args, **kwargs):
 
     :return: None
     """
-    from telebot.apihelper import ApiTelegramException
+    from bot.apihelper import ApiTelegramException
     from time import sleep
 
     try:

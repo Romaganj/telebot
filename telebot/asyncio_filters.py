@@ -1,8 +1,8 @@
 from abc import ABC
 from typing import Optional, Union
-from telebot.asyncio_handler_backends import State
+from bot.asyncio_handler_backends import State
 
-from telebot import types
+from bot import types
 
 
 class SimpleCustomFilter(ABC):

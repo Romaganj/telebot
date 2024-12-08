@@ -54,9 +54,9 @@ from typing import Union
 
 import keyboards
 from i18n_base_middleware import I18N
-from telebot import TeleBot
-from telebot import types, StateMemoryStorage
-from telebot.custom_filters import TextMatchFilter, TextFilter
+from bot import TeleBot
+from bot import types, StateMemoryStorage
+from bot.custom_filters import TextMatchFilter, TextFilter
 
 class I18NMiddleware(I18N):
 

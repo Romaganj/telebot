@@ -1,5 +1,5 @@
-from telebot import TeleBot
-from telebot.handler_backends import ContinueHandling
+from bot import TeleBot
+from bot.handler_backends import ContinueHandling
 
 
 bot = TeleBot('TOKEN')

@@ -109,10 +109,11 @@ The TeleBot class (defined in \__init__.py) encapsulates all API calls in a sing
 
 Create a file called `echo_bot.py`.
 Then, open the file and create an instance of the TeleBot class.
-```python
-import telebot
 
-bot = telebot.TeleBot("TOKEN", parse_mode=None) # You can set parse_mode by default. HTML or MARKDOWN
+```python
+import bot
+
+bot = telebot.TeleBot("TOKEN", parse_mode=None)  # You can set parse_mode by default. HTML or MARKDOWN
 ```
 *Note: Make sure to actually replace TOKEN with your own API token.*
 
@@ -141,18 +142,22 @@ We now have a basic bot which replies a static message to "/start" and "/help" c
 bot.infinity_polling()
 ```
 Alright, that's it! Our source file now looks like this:
+
 ```python
-import telebot
+import bot
 
 bot = telebot.TeleBot("YOUR_BOT_TOKEN")
 
+
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-	bot.reply_to(message, "Howdy, how are you doing?")
+    bot.reply_to(message, "Howdy, how are you doing?")
+
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-	bot.reply_to(message, message.text)
+    bot.reply_to(message, message.text)
+
 
 bot.infinity_polling()
 ```
@@ -203,36 +208,44 @@ TeleBot supports the following filters:
 Here are some examples of using the filters and message handlers:
 
 ```python
-import telebot
+import bot
+
 bot = telebot.TeleBot("TOKEN")
+
 
 # Handles all text messages that contains the commands '/start' or '/help'.
 @bot.message_handler(commands=['start', 'help'])
 def handle_start_help(message):
-	pass
+    pass
+
 
 # Handles all sent documents and audio files
 @bot.message_handler(content_types=['document', 'audio'])
 def handle_docs_audio(message):
-	pass
+    pass
+
 
 # Handles all text messages that match the regular expression
 @bot.message_handler(regexp="SOME_REGEXP")
 def handle_message(message):
-	pass
+    pass
+
 
 # Handles all messages for which the lambda returns True
 @bot.message_handler(func=lambda message: message.document.mime_type == 'text/plain', content_types=['document'])
 def handle_text_doc(message):
-	pass
+    pass
+
 
 # Which could also be defined as:
 def test_message(message):
-	return message.document.mime_type == 'text/plain'
+    return message.document.mime_type == 'text/plain'
+
 
 @bot.message_handler(func=test_message, content_types=['document'])
 def handle_text_doc(message):
-	pass
+    pass
+
 
 # Handlers can be stacked to create a function which will be called if either message_handler is eligible
 # This handler will be called if the message starts with '/hello' OR is some emoji
@@ -415,11 +428,12 @@ def admin_of_group(message):
 	
 
 #### TeleBot
+
 ```python
-import telebot
+import bot
 
 TOKEN = '<token_string>'
-tb = telebot.TeleBot(TOKEN)	#create a new Telegram Bot object
+tb = telebot.TeleBot(TOKEN)  # create a new Telegram Bot object
 
 # Upon calling this function, TeleBot starts polling the Telegram servers for new messages.
 # - interval: int (default 0) - The interval between polling requests
@@ -438,7 +452,7 @@ tb.remove_webhook()
 # getUpdates
 updates = tb.get_updates()
 # or
-updates = tb.get_updates(1234,100,20) #get_Updates(offset, limit, timeout):
+updates = tb.get_updates(1234, 100, 20)  # get_Updates(offset, limit, timeout):
 
 # sendMessage
 tb.send_message(chat_id, text)
@@ -500,6 +514,7 @@ tb.send_chat_action(chat_id, action_string)
 # Downloading a file is straightforward
 # Returns a File object
 import requests
+
 file_info = tb.get_file(file_id)
 
 file = requests.get('https://api.telegram.org/file/bot{0}/{1}'.format(API_TOKEN, file_info.file_path))
@@ -510,7 +525,7 @@ file = requests.get('https://api.telegram.org/file/bot{0}/{1}'.format(API_TOKEN,
 All `send_xyz` functions of TeleBot take an optional `reply_markup` argument. This argument must be an instance of `ReplyKeyboardMarkup`, `ReplyKeyboardRemove` or `ForceReply`, which are defined in types.py.
 
 ```python
-from telebot import types
+from bot import types
 
 # Using the ReplyKeyboardMarkup class
 # It's constructor can take the following optional arguments:
@@ -581,8 +596,9 @@ Refer [Bot Api](https://core.telegram.org/bots/api#messageentity) for extra deta
 ### Using local Bot API Sever
 Since version 5.0 of the Bot API, you have the possibility to run your own [Local Bot API Server](https://core.telegram.org/bots/api#using-a-local-bot-api-server).
 pyTelegramBotAPI also supports this feature.
+
 ```python
-from telebot import apihelper
+from bot import apihelper
 
 apihelper.API_URL = "http://localhost:4200/bot{0}/{1}"
 ```
@@ -598,14 +614,16 @@ tb = telebot.AsyncTeleBot("TOKEN")
 ```
 Now, every function that calls the Telegram API is executed in a separate asynchronous task.
 Using AsyncTeleBot allows you to do the following:
+
 ```python
-import telebot
+import bot
 
 tb = telebot.AsyncTeleBot("TOKEN")
 
+
 @tb.message_handler(commands=['start'])
 async def start_message(message):
-	await bot.send_message(message.chat.id, 'Hello!')
+    await bot.send_message(message.chat.id, 'Hello!')
 
 ```
 
@@ -613,8 +631,10 @@ See more in [examples](https://github.com/eternnoir/pyTelegramBotAPI/tree/master
 
 ### Sending large text messages
 Sometimes you must send messages that exceed 5000 characters. The Telegram API can not handle that many characters in one request, so we need to split the message in multiples. Here is how to do that using the API:
+
 ```python
-from telebot import util
+from bot import util
+
 large_text = open("large_text.txt", "rb").read()
 
 # Split the text each 3000 characters.
@@ -622,19 +642,21 @@ large_text = open("large_text.txt", "rb").read()
 splitted_text = util.split_string(large_text, 3000)
 
 for text in splitted_text:
-	tb.send_message(chat_id, text)
+    tb.send_message(chat_id, text)
 ```
 
 Or you can use the new `smart_split` function to get more meaningful substrings:
+
 ```python
-from telebot import util
+from bot import util
+
 large_text = open("large_text.txt", "rb").read()
 # Splits one string into multiple strings, with a maximum amount of `chars_per_string` (max. 4096)
 # Splits by last '\n', '. ' or ' ' in exactly this priority.
 # smart_split returns a list with the splitted text.
 splitted_text = util.smart_split(large_text, chars_per_string=3000)
 for text in splitted_text:
-	tb.send_message(chat_id, text)
+    tb.send_message(chat_id, text)
 ```
 ### Controlling the amount of Threads used by TeleBot
 The TeleBot constructor takes the following optional arguments:
@@ -679,9 +701,9 @@ For sync:
 You can use proxy for request. `apihelper.proxy` object will use by call `requests` proxies argument.
 
 ```python
-from telebot import apihelper
+from bot import apihelper
 
-apihelper.proxy = {'http':'http://127.0.0.1:3128'}
+apihelper.proxy = {'http': 'http://127.0.0.1:3128'}
 ```
 
 If you want to use socket5 proxy you need install dependency `pip install requests[socks]` and make sure, that you have the latest version of `gunicorn`, `PySocks`, `pyTelegramBotAPI`, `requests` and `urllib3`.
@@ -691,10 +713,11 @@ apihelper.proxy = {'https':'socks5://userproxy:password@proxy_address:port'}
 ```
 
 For async:
-```python
-from telebot import asyncio_helper
 
-asyncio_helper.proxy = 'http://127.0.0.1:3128' #url
+```python
+from bot import asyncio_helper
+
+asyncio_helper.proxy = 'http://127.0.0.1:3128'  # url
 ```
 
 
@@ -739,15 +762,15 @@ This class is not controlled by threads. Asyncio tasks are created to execute al
 
 ### EchoBot
 Echo Bot example on AsyncTeleBot:
-	
+
 ```python
 # This is a simple echo bot using the decorator mechanism.
 # It echoes any incoming text messages.
 
-from telebot.async_telebot import AsyncTeleBot
+from bot.async_telebot import AsyncTeleBot
 import asyncio
-bot = AsyncTeleBot('TOKEN')
 
+bot = AsyncTeleBot('TOKEN')
 
 
 # Handle '/start' and '/help'

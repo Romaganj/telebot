@@ -1,6 +1,6 @@
 # This example shows you how to create a custom QWERTY keyboard using reply keyboard markup
-import telebot
-from telebot.types import ReplyKeyboardMarkup, KeyboardButton
+import bot
+from bot.types import ReplyKeyboardMarkup, KeyboardButton
 
 TOKEN = "<your_token>"
 bot = telebot.TeleBot(TOKEN)

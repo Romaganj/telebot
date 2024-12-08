@@ -8,19 +8,19 @@ from typing import Any, Awaitable, Callable, List, Optional, Union
 import sys
 
 # this imports are used to avoid circular import error
-import telebot.util
-import telebot.types
+import bot.util
+import bot.types
 
 
 # storages
-from telebot.asyncio_storage import StateMemoryStorage, StatePickleStorage, StateStorageBase
-from telebot.asyncio_handler_backends import BaseMiddleware, CancelUpdate, SkipHandler, State, ContinueHandling
+from bot.asyncio_storage import StateMemoryStorage, StatePickleStorage, StateStorageBase
+from bot.asyncio_handler_backends import BaseMiddleware, CancelUpdate, SkipHandler, State, ContinueHandling
 
 from inspect import signature
 
-from telebot import util, types, asyncio_helper
+from bot import util, types, asyncio_helper
 import asyncio
-from telebot import asyncio_filters
+from bot import asyncio_filters
 
 logger = logging.getLogger('TeleBot')
 
@@ -221,7 +221,7 @@ class AsyncTeleBot:
     def _setup_change_detector(self, path_to_watch: str) -> None:
         try:
             from watchdog.observers import Observer
-            from telebot.ext.reloader import EventHandler
+            from bot.ext.reloader import EventHandler
         except ImportError:
             raise ImportError(
                 'Please install watchdog and psutil before using restart_on_change option.'
@@ -2108,7 +2108,7 @@ class AsyncTeleBot:
         ssl_context = (certificate, certificate_key) if certificate else (None, None)
         # for webhooks
         try:
-            from telebot.ext.aio import AsyncWebhookListener
+            from bot.ext.aio import AsyncWebhookListener
         except (NameError, ImportError):
             raise ImportError("Please install uvicorn and fastapi in order to use `run_webhooks` method.")
         self.webhook_listener = AsyncWebhookListener(bot=self, secret_token=secret_token, host=listen, port=port, ssl_context=ssl_context, url_path='/'+url_path)
